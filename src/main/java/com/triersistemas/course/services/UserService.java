@@ -22,4 +22,12 @@ public class UserService {
 		Optional<Users> obj = repository.findById(id);
 		return obj.get();
 	}
+	
+	public Users insert(Users obj) {
+		return repository.save(obj);
+	}
+	
+	public void delete(Long id) {
+		repository.deleteById(id);
+	}
 }
